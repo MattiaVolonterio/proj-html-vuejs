@@ -44,7 +44,7 @@ export default {
 .container {
   @include space-between;
   gap: 80px;
-  margin-bottom: 7rem;
+  margin-bottom: 9rem;
   .col-left {
     flex-grow: 0;
     flex-shrink: 0;

@@ -1,6 +1,8 @@
 <script>
 import CardCoaching from "./CardCoaching.vue";
 import AppCoachingCit from "./AppCoachingCit.vue";
+import AppYoutubePlayer from "./AppYoutubePlayer.vue";
+
 export default {
   data() {
     return {};
@@ -8,6 +10,7 @@ export default {
   components: {
     CardCoaching,
     AppCoachingCit,
+    AppYoutubePlayer,
   },
   props: { cardsArray: Array },
   methods: {},
@@ -36,6 +39,9 @@ export default {
 
     <!-- CITATION -->
     <AppCoachingCit />
+
+    <!-- YOUTUBE PLAYER -->
+    <AppYoutubePlayer />
   </div>
 </template>
 
