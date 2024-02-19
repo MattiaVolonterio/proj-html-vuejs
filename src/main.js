@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 /* import specific icons */
 import {
   faTwitter,
-  faFacebook,
+  faFacebookF,
   faSquareFacebook,
   faInstagram,
   faLinkedin,
@@ -25,12 +25,19 @@ import {
   faUser,
   faClock,
 } from "@fortawesome/free-regular-svg-icons";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faBook,
+  faCartShopping,
+  faCompress,
+  faRulerCombined,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
 library.add(
   faTwitter,
-  faFacebook,
+  faFacebookF,
   faSquareFacebook,
   faInstagram,
   faLinkedin,
@@ -40,7 +47,12 @@ library.add(
   faFileLines,
   faUser,
   faClock,
-  faLocationDot
+  faLocationDot,
+  faBook,
+  faCartShopping,
+  faCompress,
+  faRulerCombined,
+  faChevronDown
 );
 
 const app = createApp(App);
