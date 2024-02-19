@@ -1,4 +1,5 @@
 <script>
+import AppBanner from "./components/AppBanner.vue";
 import AppHeader from "./components/AppHeader.vue";
 export default {
   data() {
@@ -12,14 +13,12 @@ export default {
       ],
     };
   },
-  components: {
-    AppHeader,
-  },
+  components: { AppBanner, AppHeader },
 };
 </script>
 
 <template>
-  <h1>Progetto</h1>
+  <AppBanner />
   <AppHeader :headerLinks="headerLinks" :headerIcons="headerIcons" />
 </template>
 

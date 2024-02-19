@@ -6,3 +6,16 @@
 img {
   max-width: 100%;
 }
+
+.btn-orange {
+  background-color: $orange;
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 25px;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $sectionTitle;
+  }
+}
