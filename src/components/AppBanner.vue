@@ -1,12 +1,7 @@
 <script>
-export default {
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
+export default {};
 </script>
+
 <template>
   <div class="banner">
     <div class="banner-title">
