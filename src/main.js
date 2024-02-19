@@ -3,4 +3,46 @@ import App from "./App.vue";
 
 import * as bootstrap from "bootstrap";
 
-createApp(App).mount("#app");
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+/* import specific icons */
+import {
+  faTwitter,
+  faFacebook,
+  faSquareFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faCopyright,
+  faCalendar,
+  faEye,
+  faFileLines,
+  faUser,
+  faClock,
+} from "@fortawesome/free-regular-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+/* add icons to the library */
+library.add(
+  faTwitter,
+  faFacebook,
+  faSquareFacebook,
+  faInstagram,
+  faLinkedin,
+  faCopyright,
+  faCalendar,
+  faEye,
+  faFileLines,
+  faUser,
+  faClock,
+  faLocationDot
+);
+
+const app = createApp(App);
+app.component("font-awesome-icon", FontAwesomeIcon);
+app.mount("#app");
