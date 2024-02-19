@@ -1,11 +1,13 @@
 <script>
 import CardCoaching from "./CardCoaching.vue";
+import AppCoachingCit from "./AppCoachingCit.vue";
 export default {
   data() {
     return {};
   },
   components: {
     CardCoaching,
+    AppCoachingCit,
   },
   props: { cardsArray: Array },
   methods: {},
@@ -13,23 +15,76 @@ export default {
 </script>
 <template>
   <div class="container">
+    <!-- TITLE -->
+    <div class="coach-head">
+      <div class="title">Artist coaching</div>
+      <div class="subtitle">
+        I understand what it takes to create. I can help you with
+      </div>
+    </div>
+
+    <!-- CARD -->
     <div class="row-modified">
-      <div v-for="card in cardsArray" class="col-modified">
+      <div
+        v-for="(card, index) in cardsArray"
+        class="col-modified"
+        :class="`col${index + 1}`"
+      >
         <CardCoaching :card="card" />
       </div>
     </div>
+
+    <!-- CITATION -->
+    <AppCoachingCit />
   </div>
 </template>
+
 <style lang="scss" scoped>
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-.row-modified {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 
-  .col-modified {
-    width: (100% / 6);
+.container {
+  width: 1080px;
+  .coach-head {
+    @include flex-column-center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    .title {
+      color: $sectionTitle;
+      font-family: "Marck Script", cursive;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 420px;
+      color: $lightBlack;
+    }
+  }
+
+  .row-modified {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 250px;
+
+    margin-bottom: 7rem;
+
+    .col-modified {
+      width: (100% / 4);
+
+      &.col1,
+      &.col3 {
+        align-self: baseline;
+      }
+
+      &.col2,
+      &.col4 {
+        align-self: flex-end;
+      }
+    }
   }
 }
 </style>

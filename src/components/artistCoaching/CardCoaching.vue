@@ -12,14 +12,17 @@ export default {
 };
 </script>
 <template>
-  <div class="card-coach">
-    <img :src="getImgPath(card.imgUrl)" alt="" />
+  <div class="card-coach" :class="card.classId">
+    <img :src="getImgPath(card.imgUrl)" alt="card" />
     <span>{{ card.title }}</span>
     <p>{{ card.parag }}</p>
   </div>
 </template>
 <style lang="scss" scoped>
 .card-coach {
+  img {
+    width: 40%;
+  }
   span {
     display: block;
     font-weight: 600;

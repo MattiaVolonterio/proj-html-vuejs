@@ -13,7 +13,7 @@ export default {
   <div class="jumbo-container">
     <JumboBackground />
     <div class="jumbo-content">
-      <div class="title marck-script-regular">Hello, Im Matin</div>
+      <div class="title">Hello, Im Matin</div>
       <div class="subtitle">
         Artist Coaching And Mentoring Might Be for You.
       </div>

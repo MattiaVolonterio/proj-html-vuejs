@@ -19,6 +19,21 @@ img {
   &:hover {
     background-color: $sectionTitle;
   }
+}
+
+.btn-orange-light {
+  background-color: $orangeLight;
+  color: $orange;
+  font-size: 0.8rem;
+  padding: 3px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $orange;
+    color: white;
+  }
 
   .marck-script-regular {
     font-family: "Marck Script", cursive;
