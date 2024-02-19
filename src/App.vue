@@ -12,6 +12,12 @@ export default {
         "fa-brands fa-instagram",
         "fa-brands fa-linkedin",
       ],
+      jumboIcons: [
+        "fa-solid fa-ruler-combined",
+        "fa-solid fa-compress",
+        "fa-solid fa-book",
+        "fa-solid fa-cart-shopping",
+      ],
     };
   },
   components: { AppBanner, AppHeader, AppJumbo },
@@ -21,7 +27,7 @@ export default {
 <template>
   <AppBanner />
   <AppHeader :headerLinks="headerLinks" :headerIcons="headerIcons" />
-  <AppJumbo />
+  <AppJumbo :jumboIcons="jumboIcons" />
 </template>
 
 <style lang="scss">

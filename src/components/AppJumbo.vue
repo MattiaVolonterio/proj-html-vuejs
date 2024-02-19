@@ -4,6 +4,8 @@ export default {
   components: {
     JumboBackground,
   },
+
+  props: { jumboIcons: Array },
 };
 </script>
 
@@ -16,6 +18,9 @@ export default {
         Artist Coaching And Mentoring Might Be for You.
       </div>
       <div class="btn-orange">Get started today</div>
+    </div>
+    <div class="jumbo-links">
+      <font-awesome-icon v-for="icon in jumboIcons" :icon="icon" />
     </div>
   </div>
 </template>
@@ -56,6 +61,22 @@ export default {
     .btn-orange {
       padding-top: 8px;
       padding-bottom: 8px;
+    }
+  }
+
+  .jumbo-links {
+    @include flex-column-center;
+    gap: 15px;
+    padding: 0.7rem;
+    background-color: $grayBg;
+    border-radius: 5px;
+    box-shadow: -2px 1px 5px 1px black;
+    position: absolute;
+    right: 0;
+    top: 50px;
+
+    & > * {
+      cursor: pointer;
     }
   }
 }
