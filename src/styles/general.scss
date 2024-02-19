@@ -14,8 +14,15 @@ img {
   padding: 3px 25px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover {
     background-color: $sectionTitle;
+  }
+
+  .marck-script-regular {
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
   }
 }
