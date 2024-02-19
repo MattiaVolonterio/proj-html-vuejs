@@ -1,6 +1,7 @@
 <script>
 import AppBanner from "./components/AppBanner.vue";
 import AppHeader from "./components/AppHeader.vue";
+import AppJumbo from "./components/AppJumbo.vue";
 export default {
   data() {
     return {
@@ -13,13 +14,14 @@ export default {
       ],
     };
   },
-  components: { AppBanner, AppHeader },
+  components: { AppBanner, AppHeader, AppJumbo },
 };
 </script>
 
 <template>
   <AppBanner />
   <AppHeader :headerLinks="headerLinks" :headerIcons="headerIcons" />
+  <AppJumbo />
 </template>
 
 <style lang="scss">
