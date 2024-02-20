@@ -6,6 +6,7 @@ import AppCoachingMain from "./components/artistCoaching/AppCoachingMain.vue";
 import AppTestimonialsMain from "./components/testimonials/AppTestimonialsMain.vue";
 import AppOnlineCourses from "./components/onlineCourse/AppOnlineCourses.vue";
 import AppBlogMain from "./components/blog/AppBlogMain.vue";
+import AppUpcomingEvents from "./components/upcomingEvents/AppUpcomingEvents.vue";
 
 export default {
   data() {
@@ -143,6 +144,26 @@ export default {
           sudentsNumber: 50,
         },
       ],
+      blogCards: [
+        {
+          imgUrl: "artist-blog-01-480x356.jpg",
+          title: "Pocket-Sized Notebooks Hold Miniature Paintings",
+          date: "May 15, 2020",
+          views: 603,
+        },
+        {
+          imgUrl: "artist-blog-02-500x680.jpg",
+          title: "Connection Between Self-Portraits and Identity",
+          date: "May 15, 2020",
+          views: 397,
+        },
+        {
+          imgUrl: "artist-blog-03-480x356.jpeg",
+          title: "Brush Strokes Energize Trees in Paintings",
+          date: "May 15, 2020",
+          views: 688,
+        },
+      ],
     };
   },
   components: {
@@ -153,6 +174,7 @@ export default {
     AppTestimonialsMain,
     AppOnlineCourses,
     AppBlogMain,
+    AppUpcomingEvents,
   },
 };
 </script>
@@ -164,7 +186,8 @@ export default {
   <AppCoachingMain :cardsArray="coachingCards" />
   <AppTestimonialsMain :testimonialCards="testimonialCards" />
   <AppOnlineCourses :coursesArray="onlineCoursesCards" />
-  <AppBlogMain />
+  <AppBlogMain :cardsArray="blogCards" />
+  <AppUpcomingEvents />
 </template>
 
 <style lang="scss">
