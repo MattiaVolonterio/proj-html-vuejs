@@ -8,6 +8,12 @@ export default {
   },
   props: { testimonialCards: Array },
 
+  methods: {
+    changeCard(index) {
+      this.currentIndex = index;
+    },
+  },
+
   components: {
     TestimonialsCard,
   },
@@ -23,6 +29,7 @@ export default {
     <!-- CAROUSEL -->
     <div class="card-container">
       <TestimonialsCard
+        @selected-card="changeCard"
         v-for="(card, index) in testimonialCards"
         :card="card"
         :index="index"

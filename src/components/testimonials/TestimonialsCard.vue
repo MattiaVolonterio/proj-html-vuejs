@@ -6,11 +6,13 @@ export default {
       return new URL(`../../assets/img/${img}`, import.meta.url).href;
     },
   },
+  emits: ["selected-card"],
 };
 </script>
 
 <template>
   <div
+    @click="$emit('selected-card', index)"
     class="card-container"
     :class="currentIndex == index ? 'active-card' : ''"
   >
@@ -41,6 +43,7 @@ export default {
   border-radius: 15px;
   @include flex-column-start;
   filter: brightness(0.5);
+  cursor: pointer;
 
   &.active-card {
     filter: brightness(1);
