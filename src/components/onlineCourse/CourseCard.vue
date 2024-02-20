@@ -36,6 +36,19 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 .card-container {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .card-bottom {
+      position: absolute;
+      left: -17px;
+      top: 80%;
+      transform: scale(0.9);
+      border: 2px solid $orange;
+      background-color: white;
+    }
+  }
   .card-bottom {
     padding: 1rem 1.5rem;
 

@@ -65,12 +65,12 @@ export default {
     .title {
       color: $sectionTitle;
       font-family: "Marck Script", cursive;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     .subtitle {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: $lightBlack;
     }
   }

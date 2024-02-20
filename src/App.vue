@@ -5,6 +5,7 @@ import AppJumbo from "./components/AppJumbo.vue";
 import AppCoachingMain from "./components/artistCoaching/AppCoachingMain.vue";
 import AppTestimonialsMain from "./components/testimonials/AppTestimonialsMain.vue";
 import AppOnlineCourses from "./components/onlineCourse/AppOnlineCourses.vue";
+import AppBlogMain from "./components/blog/AppBlogMain.vue";
 
 export default {
   data() {
@@ -151,6 +152,7 @@ export default {
     AppCoachingMain,
     AppTestimonialsMain,
     AppOnlineCourses,
+    AppBlogMain,
   },
 };
 </script>
@@ -162,6 +164,7 @@ export default {
   <AppCoachingMain :cardsArray="coachingCards" />
   <AppTestimonialsMain :testimonialCards="testimonialCards" />
   <AppOnlineCourses :coursesArray="onlineCoursesCards" />
+  <AppBlogMain />
 </template>
 
 <style lang="scss">
