@@ -33,6 +33,12 @@ export default {
         alt="shape 2"
         class="backgroundShapeTop"
       />
+
+      <img
+        class="paint-stains"
+        :src="getImgPath('paint-stains.png')"
+        alt="paint-stains"
+      />
     </div>
   </div>
 </template>
@@ -62,6 +68,14 @@ export default {
       position: absolute;
       right: -55px;
       top: 100px;
+    }
+
+    .paint-stains {
+      width: 40%;
+      position: absolute;
+      z-index: -2;
+      top: -120px;
+      left: -120px;
     }
 
     .backgroundShapeBottom {

@@ -1,4 +1,5 @@
 <script>
+import CardCoachingBg from "./CardCoachingBg.vue";
 import CardCoaching from "./CardCoaching.vue";
 import AppCoachingCit from "./AppCoachingCit.vue";
 import AppYoutubePlayer from "./AppYoutubePlayer.vue";
@@ -8,6 +9,7 @@ export default {
     return {};
   },
   components: {
+    CardCoachingBg,
     CardCoaching,
     AppCoachingCit,
     AppYoutubePlayer,
@@ -17,26 +19,30 @@ export default {
 };
 </script>
 <template>
+  <div class="card-coaching-container">
+    <CardCoachingBg />
+    <div class="container container-top">
+      <!-- TITLE -->
+      <div class="coach-head">
+        <div class="title">Artist coaching</div>
+        <div class="subtitle">
+          I understand what it takes to create. I can help you with
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="row-modified">
+        <div
+          v-for="(card, index) in cardsArray"
+          class="col-modified"
+          :class="`col${index + 1}`"
+        >
+          <CardCoaching :card="card" />
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
-    <!-- TITLE -->
-    <div class="coach-head">
-      <div class="title">Artist coaching</div>
-      <div class="subtitle">
-        I understand what it takes to create. I can help you with
-      </div>
-    </div>
-
-    <!-- CARD -->
-    <div class="row-modified">
-      <div
-        v-for="(card, index) in cardsArray"
-        class="col-modified"
-        :class="`col${index + 1}`"
-      >
-        <CardCoaching :card="card" />
-      </div>
-    </div>
-
     <!-- CITATION -->
     <AppCoachingCit />
 
@@ -48,6 +54,20 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.card-coaching-container {
+  height: $cardCoachingHeight;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  .container-top {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 .container {
   width: 1080px;

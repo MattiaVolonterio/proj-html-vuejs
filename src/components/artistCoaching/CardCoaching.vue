@@ -3,7 +3,9 @@ export default {
   data() {
     return {};
   },
+
   props: { card: Object },
+
   methods: {
     getImgPath(img) {
       return new URL(`../../assets/img/${img}`, import.meta.url).href;

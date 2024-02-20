@@ -11,6 +11,7 @@ export default {
 
 <template>
   <div class="jumbo-container">
+    <!-- LEFT -->
     <div class="left">
       <img
         class="fourthLeft"
@@ -37,7 +38,13 @@ export default {
         :src="getLogoPath('artist-shape-03.png')"
         alt="dots"
       />
+      <img
+        class="paint-stains"
+        :src="getLogoPath('paint-stains.png')"
+        alt="paint"
+      />
     </div>
+    <!-- RIGHT -->
     <div class="right">
       <img
         class="secondRight"
@@ -88,20 +95,30 @@ export default {
     position: absolute;
     top: 60px;
     left: 18%;
-    z-index: 1;
+    z-index: 2;
   }
 
   .fourthLeft {
     position: absolute;
     bottom: 10%;
     left: 10%;
-    z-index: 2;
+    z-index: 3;
   }
 
   .fifthLeft {
     position: absolute;
     left: 0;
     bottom: 10%;
+
+    z-index: 1;
+  }
+
+  .paint-stains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 80%;
   }
 
   .firstRight {
