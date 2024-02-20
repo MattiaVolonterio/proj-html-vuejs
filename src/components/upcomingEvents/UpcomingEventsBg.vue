@@ -36,7 +36,6 @@ export default {
   height: $eventHeight;
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-bottom: 5rem;
 
   .shape-one {
     position: absolute;

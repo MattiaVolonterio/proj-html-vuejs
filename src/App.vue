@@ -7,6 +7,7 @@ import AppTestimonialsMain from "./components/testimonials/AppTestimonialsMain.v
 import AppOnlineCourses from "./components/onlineCourse/AppOnlineCourses.vue";
 import AppBlogMain from "./components/blog/AppBlogMain.vue";
 import AppUpcomingEvents from "./components/upcomingEvents/AppUpcomingEvents.vue";
+import AppEmailMain from "./components/email/AppEmailMain.vue";
 
 export default {
   data() {
@@ -201,6 +202,7 @@ export default {
     AppOnlineCourses,
     AppBlogMain,
     AppUpcomingEvents,
+    AppEmailMain,
   },
 };
 </script>
@@ -214,6 +216,7 @@ export default {
   <AppOnlineCourses :coursesArray="onlineCoursesCards" />
   <AppBlogMain :cardsArray="blogCards" />
   <AppUpcomingEvents :cardsArray="eventCards" />
+  <AppEmailMain />
 </template>
 
 <style lang="scss">

@@ -58,8 +58,6 @@ export default {
     top: 230px;
     left: 50%;
     transform: translate(-50%);
-
-    margin-bottom: 3rem;
   }
 }
 </style>
