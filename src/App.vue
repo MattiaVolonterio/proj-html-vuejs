@@ -164,6 +164,32 @@ export default {
           views: 688,
         },
       ],
+      eventCards: [
+        {
+          imgUrl: "artist-event-04-250x300.jpg",
+          date: "NOV 22, 2020",
+          title: "Storytelling Workshop",
+          position: "Texas, US",
+        },
+        {
+          imgUrl: "artist-event-03-250x300.jpg",
+          date: "OCT 10, 2020",
+          title: "Painting Art Contest 2020",
+          position: "New York, US",
+        },
+        {
+          imgUrl: "artist-event-02-250x300.jpg",
+          date: "NOV 23, 2020",
+          title: "International Art Fair 2020",
+          position: "Hamburg, Germany",
+        },
+        {
+          imgUrl: "artist-event-01-250x300.jpg",
+          date: "DEC 15, 2020",
+          title: "Street Performance: Call for Artist",
+          position: "Illinois, US",
+        },
+      ],
     };
   },
   components: {
@@ -187,7 +213,7 @@ export default {
   <AppTestimonialsMain :testimonialCards="testimonialCards" />
   <AppOnlineCourses :coursesArray="onlineCoursesCards" />
   <AppBlogMain :cardsArray="blogCards" />
-  <AppUpcomingEvents />
+  <AppUpcomingEvents :cardsArray="eventCards" />
 </template>
 
 <style lang="scss">

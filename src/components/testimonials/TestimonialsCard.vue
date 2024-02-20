@@ -42,7 +42,7 @@ export default {
   padding: 1.5rem;
   border-radius: 15px;
   @include flex-column-start;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   cursor: pointer;
 
   &.active-card {
