@@ -33,11 +33,13 @@ import {
   faCompress,
   faRulerCombined,
   faChevronDown,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
 library.add(
   faCircle,
+  faArrowRight,
   faTwitter,
   faFacebookF,
   faSquareFacebook,

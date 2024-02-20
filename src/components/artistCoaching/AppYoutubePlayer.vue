@@ -45,7 +45,6 @@ export default {
 <style lang="scss" scoped>
 .container {
   text-align: center;
-  margin-bottom: 7rem;
 
   .player-container {
     width: 80%;

@@ -9,6 +9,9 @@ export default {
   props: { testimonialCards: Array },
 
   methods: {
+    getImgPath(img) {
+      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+    },
     changeCard(index) {
       this.currentIndex = index;
     },
@@ -21,6 +24,7 @@ export default {
 </script>
 
 <template>
+  <div class="wave"><img :src="getImgPath('wave.svg')" alt="wave" /></div>
   <div class="testimonials">
     <div class="testimonials-header">
       <div class="title">Testimonials</div>

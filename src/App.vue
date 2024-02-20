@@ -4,6 +4,7 @@ import AppHeader from "./components/AppHeader.vue";
 import AppJumbo from "./components/AppJumbo.vue";
 import AppCoachingMain from "./components/artistCoaching/AppCoachingMain.vue";
 import AppTestimonialsMain from "./components/testimonials/AppTestimonialsMain.vue";
+import AppOnlineCourses from "./components/onlineCourse/AppOnlineCourses.vue";
 
 export default {
   data() {
@@ -83,6 +84,64 @@ export default {
           spec: "/ Multimedia Admin",
         },
       ],
+      onlineCoursesCards: [
+        {
+          imgUrl: "artist-course-08-480x480.jpg",
+          price: "$18.00",
+          title: "The Acrylic Painting Academy",
+          lessonsNumber: 4,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-07-480x480.jpg",
+          price: "$21.00",
+          title: "Drawing and Shading: Complete Course",
+          lessonsNumber: 14,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-06-480x480.jpg",
+          price: "$19.00",
+          title: "The Color Theory for Digital Artist",
+          lessonsNumber: 7,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-05-480x480.jpg",
+          price: "$35.00",
+          title: "Ultimate Guide to Digital Sketching for Beginner",
+          lessonsNumber: 14,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-04-480x480.jpg",
+          price: "$19.00",
+          title: "Portrait Drawing The Smart Way",
+          lessonsNumber: 2,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-03-480x480.jpg",
+          price: "$19.00",
+          title: "Mastering Watercolor Painting from Beginner",
+          lessonsNumber: 9,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-02-480x480.jpg",
+          price: "$25.00",
+          title: "The Art & Science of Drawing",
+          lessonsNumber: 4,
+          sudentsNumber: 50,
+        },
+        {
+          imgUrl: "artist-course-01-480x480.jpg",
+          price: "$22.00",
+          title: "The Colored Pencil Drawing Course",
+          lessonsNumber: 6,
+          sudentsNumber: 50,
+        },
+      ],
     };
   },
   components: {
@@ -91,6 +150,7 @@ export default {
     AppJumbo,
     AppCoachingMain,
     AppTestimonialsMain,
+    AppOnlineCourses,
   },
 };
 </script>
@@ -101,6 +161,7 @@ export default {
   <AppJumbo :jumboIcons="jumboIcons" />
   <AppCoachingMain :cardsArray="coachingCards" />
   <AppTestimonialsMain :testimonialCards="testimonialCards" />
+  <AppOnlineCourses :coursesArray="onlineCoursesCards" />
 </template>
 
 <style lang="scss">
