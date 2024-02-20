@@ -27,6 +27,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faLocationDot,
+  faCircle,
   faBook,
   faCartShopping,
   faCompress,
@@ -36,6 +37,7 @@ import {
 
 /* add icons to the library */
 library.add(
+  faCircle,
   faTwitter,
   faFacebookF,
   faSquareFacebook,
