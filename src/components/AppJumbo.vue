@@ -52,7 +52,7 @@ export default {
 
     .subtitle {
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: $lightBlack;
 
       margin-bottom: 20px;
