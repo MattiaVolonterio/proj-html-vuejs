@@ -13,9 +13,16 @@ export default {
     <div class="container">
       <div class="input-label">Newsletter to get in touch</div>
 
-      <div class="email-input">
+      <!--       <div class="email-input">
         <span>Your e-mail</span>
-        <font-awesome-icon icon="fa-solid fa-arrow-right" />
+      </div> -->
+      <div class="email-input">
+        <input
+          type="email"
+          class="form-control shadow-none"
+          placeholder="Your e-mail"
+        />
+        <font-awesome-icon icon="fa-solid fa-arrow-right" class="input-arrow" />
       </div>
     </div>
   </div>
@@ -53,8 +60,33 @@ export default {
       flex-grow: 1;
       flex-shrink: 0;
 
-      border-bottom: 1px solid white;
-      padding-bottom: 0.6rem;
+      ::placeholder {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /*       padding-bottom: 0.6rem; */
+
+      .form-control {
+        position: relative;
+        height: 50px;
+        border-radius: 0;
+        background-color: inherit;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .input-arrow {
+        cursor: pointer;
+        position: absolute;
+        bottom: 50%;
+        right: 20px;
+        transform: translateY(50%);
+      }
 
       span {
         display: inline block;

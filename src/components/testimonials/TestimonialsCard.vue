@@ -42,11 +42,11 @@ export default {
   padding: 1.5rem;
   border-radius: 15px;
   @include flex-column-start;
-  filter: brightness(0.8);
+  filter: opacity(0.5);
   cursor: pointer;
 
   &.active-card {
-    filter: brightness(1);
+    filter: opacity(1);
   }
 
   .card-top {
