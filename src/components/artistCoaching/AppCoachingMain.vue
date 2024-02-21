@@ -5,9 +5,6 @@ import AppCoachingCit from "./AppCoachingCit.vue";
 import AppYoutubePlayer from "./AppYoutubePlayer.vue";
 
 export default {
-  data() {
-    return {};
-  },
   components: {
     CardCoachingBg,
     CardCoaching,
@@ -15,9 +12,9 @@ export default {
     AppYoutubePlayer,
   },
   props: { cardsArray: Array },
-  methods: {},
 };
 </script>
+
 <template>
   <div class="card-coaching-container">
     <CardCoachingBg />
@@ -99,7 +96,7 @@ export default {
     margin-bottom: 7rem;
 
     .col-modified {
-      width: (100% / 4);
+      width: calc(100% / 4);
 
       &.col1,
       &.col3 {

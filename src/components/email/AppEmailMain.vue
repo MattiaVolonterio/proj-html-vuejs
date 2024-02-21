@@ -1,16 +1,12 @@
 <script>
 import EmailBg from "./EmailBg.vue";
 export default {
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
   components: {
     EmailBg,
   },
 };
 </script>
+
 <template>
   <div class="email-container">
     <EmailBg />
@@ -24,6 +20,7 @@ export default {
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;

@@ -8,6 +8,7 @@ import AppOnlineCourses from "./components/onlineCourse/AppOnlineCourses.vue";
 import AppBlogMain from "./components/blog/AppBlogMain.vue";
 import AppUpcomingEvents from "./components/upcomingEvents/AppUpcomingEvents.vue";
 import AppEmailMain from "./components/email/AppEmailMain.vue";
+import AppFooterMain from "./components/footer/AppFooterMain.vue";
 
 export default {
   data() {
@@ -191,6 +192,35 @@ export default {
           position: "Illinois, US",
         },
       ],
+      footerAddressInfo: [
+        "382 NE 191st St # 87394 Miami, FL 33179-3899",
+        "+1(305)547-9909 (9am -5pm EST, Monday - Friday)",
+        "support@maxcoach.com",
+      ],
+      footerAddressBrand: [
+        "fa-brands fa-square-facebook",
+        "fa-brands fa-twitter",
+        "fa-brands fa-instagram",
+        "fa-brands fa-linkedin",
+      ],
+      footerExplore: [
+        "Start here",
+        "Success story",
+        "Blog",
+        "Courses",
+        "Contact us",
+      ],
+      footerInformation: [
+        "Membership",
+        "Purchase guide",
+        "Privacy policy",
+        "Terms of services",
+      ],
+      footerImg: [
+        "artist-blog-03-480x356.jpeg",
+        "artist-event-03-250x300.jpg",
+        "artist-event-02-250x300.jpg",
+      ],
     };
   },
   components: {
@@ -203,6 +233,7 @@ export default {
     AppBlogMain,
     AppUpcomingEvents,
     AppEmailMain,
+    AppFooterMain,
   },
 };
 </script>
@@ -217,6 +248,13 @@ export default {
   <AppBlogMain :cardsArray="blogCards" />
   <AppUpcomingEvents :cardsArray="eventCards" />
   <AppEmailMain />
+  <AppFooterMain
+    :footerAddressInfo="footerAddressInfo"
+    :footerAddressBrand="footerAddressBrand"
+    :footerExplore="footerExplore"
+    :footerInformation="footerInformation"
+    :instaImg="footerImg"
+  />
 </template>
 
 <style lang="scss">
