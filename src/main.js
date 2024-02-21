@@ -34,6 +34,7 @@ import {
   faRulerCombined,
   faChevronDown,
   faArrowRight,
+  faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
@@ -56,7 +57,8 @@ library.add(
   faCartShopping,
   faCompress,
   faRulerCombined,
-  faChevronDown
+  faChevronDown,
+  faArrowUp
 );
 
 const app = createApp(App);

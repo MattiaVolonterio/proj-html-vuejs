@@ -14,6 +14,10 @@ export default {
     getImgPath(img) {
       return new URL(`../../assets/img/${img}`, import.meta.url).href;
     },
+
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
@@ -85,6 +89,13 @@ export default {
         </span>
       </div>
     </div>
+    <div class="to-top-button" @click="scrollTop()">
+      <font-awesome-icon
+        icon="fa-solid fa-arrow-up"
+        size="xl"
+        style="color: white"
+      />
+    </div>
   </footer>
 </template>
 
@@ -92,68 +103,86 @@ export default {
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.container {
-  .row {
-    margin-top: 5rem;
-    margin-bottom: 6rem;
+footer {
+  position: relative;
+  .container {
+    .row {
+      margin-top: 5rem;
+      margin-bottom: 6rem;
 
-    .col-title {
-      font-weight: bold;
+      .col-title {
+        font-weight: bold;
 
-      a {
-        font-size: 0.85rem;
-        color: $orange;
+        a {
+          font-size: 0.85rem;
+          color: $orange;
+        }
       }
-    }
 
-    .col-brands {
-      margin-top: 1rem;
-    }
+      .col-brands {
+        margin-top: 1rem;
+      }
 
-    .col-list {
-      margin-top: 1rem;
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      .col-list {
+        margin-top: 1rem;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
 
-        li {
-          margin-top: 0.6rem;
-          font-size: 0.9rem;
-          color: $headerList;
-          a {
-            text-decoration: none;
-            color: inherit;
+          li {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: $headerList;
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+      }
+
+      .col-img {
+        display: flex;
+        gap: 20px;
+        margin-top: 25px;
+
+        .img-container {
+          width: 120px;
+          aspect-ratio: 1;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
           }
         }
       }
     }
 
-    .col-img {
-      display: flex;
-      gap: 20px;
-      margin-top: 25px;
-
-      .img-container {
-        width: 120px;
-        aspect-ratio: 1;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-      }
+    .footer-end {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 0.8rem;
+      color: $headerList;
     }
   }
+  .to-top-button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
 
-  .footer-end {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-    color: $headerList;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $orange;
   }
 }
 </style>
