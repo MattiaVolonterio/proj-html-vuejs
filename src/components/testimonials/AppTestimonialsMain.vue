@@ -33,11 +33,26 @@ export default {
     <!-- CAROUSEL -->
     <div class="card-container">
       <TestimonialsCard
+        class="unactive-card"
         @selected-card="changeCard"
-        v-for="(card, index) in testimonialCards"
-        :card="card"
-        :index="index"
-        :currentIndex="currentIndex"
+        :card="
+          currentIndex == 0
+            ? testimonialCards[testimonialCards.length - 1]
+            : testimonialCards[currentIndex - 1]
+        "
+      />
+      <TestimonialsCard
+        @selected-card="changeCard"
+        :card="testimonialCards[currentIndex]"
+      />
+      <TestimonialsCard
+        class="unactive-card"
+        @selected-card="changeCard"
+        :card="
+          currentIndex == testimonialCards.length - 1
+            ? testimonialCards[0]
+            : testimonialCards[currentIndex + 1]
+        "
       />
     </div>
     <div class="card-selection">
@@ -79,8 +94,15 @@ export default {
     display: flex;
     gap: 20px;
 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+
+    .unactive-card {
+      filter: opacity(0.6);
+    }
   }
 
   .card-selection {
@@ -104,3 +126,30 @@ export default {
   }
 }
 </style>
+
+<!-- <template>
+  <div class="wave"><img :src="getImgPath('wave.svg')" alt="wave" /></div>
+  <div class="testimonials">
+    <div class="testimonials-header">
+      <div class="title">Testimonials</div>
+      <div class="subtitle">Why do people love me?</div>
+    </div>
+    <div class="card-container">
+      <TestimonialsCard
+        @selected-card="changeCard"
+        v-for="(card, index) in testimonialCards"
+        :card="card"
+        :index="index"
+        :currentIndex="currentIndex"
+      />
+    </div>
+    <div class="card-selection">
+      <div
+        v-for="(n, index) in testimonialCards"
+        class="selection-dot"
+        @click="currentIndex = index"
+        :class="index == currentIndex ? 'selected' : ''"
+      ></div>
+    </div>
+  </div>
+</template> -->

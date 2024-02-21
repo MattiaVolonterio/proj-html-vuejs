@@ -1,21 +1,16 @@
 <script>
 export default {
-  props: { card: Object, currentIndex: Number, index: Number },
+  props: { card: Object },
   methods: {
     getImgPath(img) {
       return new URL(`../../assets/img/${img}`, import.meta.url).href;
     },
   },
-  emits: ["selected-card"],
 };
 </script>
 
 <template>
-  <div
-    @click="$emit('selected-card', index)"
-    class="card-container"
-    :class="currentIndex == index ? 'active-card' : ''"
-  >
+  <div class="card-container">
     <div class="card-top">
       <span class="card-title">{{ card.title }}</span>
       <span class="card-par">{{ card.paragraph }}</span>
@@ -36,18 +31,12 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 .card-container {
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   height: 300px;
   background-color: white;
   padding: 1.5rem;
   border-radius: 15px;
   @include flex-column-start;
-  filter: opacity(0.5);
-  cursor: pointer;
-
-  &.active-card {
-    filter: opacity(1);
-  }
 
   .card-top {
     height: 60%;
